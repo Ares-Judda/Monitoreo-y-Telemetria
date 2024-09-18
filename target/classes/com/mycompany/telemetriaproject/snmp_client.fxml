@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane id="AnchorPane" prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.telemetriaproject.SNMPClientController">
+    <children>
+        <!-- Título -->
+        <Label layoutX="20.0" layoutY="14.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="SNMP Client" />
+
+        <!-- Botón para comenzar análisis SNMP -->
+        <Button fx:id="startButton" layoutX="259.0" layoutY="16.0" onAction="#startAnalysis" style="-fx-background-color: #2E8B57; -fx-text-fill: white;" text="Comenzar Análisis" />
+
+        <!-- Botón para detener el análisis -->
+        <Button fx:id="stopButton" layoutX="507.0" layoutY="16.0" onAction="#stopAnalysis" style="-fx-background-color: #FF6347; -fx-text-fill: white;" text="Detener" />
+
+        <!-- Área de texto para mostrar resultados -->
+        <TextArea fx:id="textArea" editable="false" layoutX="20" layoutY="130" prefHeight="240" prefWidth="560" style="-fx-font-family: Consolas; -fx-font-size: 14px;" wrapText="true" />
+
+        <!-- Barra de progreso (opcional) -->
+        <ProgressBar fx:id="progressBar" layoutX="200" layoutY="380" prefWidth="200" visible="false" />
+      <Label fx:id="lblContact" layoutX="20.0" layoutY="61.0" prefHeight="35.0" prefWidth="344.0" style="-fx-font-size: 16px; -fx-font-weight: bold;">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPlace" layoutX="20.0" layoutY="96.0" prefHeight="35.0" prefWidth="344.0" style="-fx-font-size: 16px; -fx-font-weight: bold;">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="ClearButton" layoutX="419.0" layoutY="16.0" onAction="#ClearAnalysis" style="-fx-background-color: #FFCA1A; -fx-text-fill: white;" text="Limpiar" />
+      <Button fx:id="PDFButton" layoutX="477.0" layoutY="89.0" onAction="#generatePDF" style="-fx-background-color: #1a66cc; -fx-text-fill: white;" text="Generar PDF" />
+      
+    </children>
+</AnchorPane>
